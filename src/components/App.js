@@ -10,7 +10,7 @@ export function App () {
   const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
   const [isEditProfilePopupOpen, setEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setAddPlacePopupOpen] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState(null);
 
   const handleCardClick = (card) => {
     setSelectedCard(card)
@@ -32,7 +32,7 @@ export function App () {
     setEditProfilePopupOpen(false)
     setEditAvatarPopupOpen(false)
     setAddPlacePopupOpen(false)
-    setSelectedCard(false);
+    setSelectedCard(null);
   }
 
   return (
@@ -40,7 +40,7 @@ export function App () {
       <Header />
       <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick}  onCardClick={handleCardClick} />
       <Footer />
-      <PopupWithForm title="Редактировать профиль" name="profile" isOpen={isEditProfilePopupOpen} onClose ={closeAllPopups} >
+      <PopupWithForm title="Редактировать профиль" name="profile" isOpen={isEditProfilePopupOpen} onClose ={closeAllPopups} buttonText="Сохранить">
         <div className="popup__input-container">
           <input className="popup__input popup__input_value_name" name="name" id="name-profile" type="text" defaultValue="" placeholder="Имя" minLength="2" maxLength="30" required />
           <p id="name-profile-error" className="error"></p>
@@ -50,7 +50,7 @@ export function App () {
           <p id="job-profile-error" className="error"></p>
         </div> 
       </PopupWithForm>
-      <PopupWithForm title="Новое место" name="card" isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} >
+      <PopupWithForm title="Новое место" name="card" isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} buttonText="Создать">
         <div className="popup__input-container">
           <input className="popup__input popup__input_value_title" id="title-card" name="name" type="text" defaultValue="" placeholder="Название" minLength="2" maxLength="30" required />
           <p id="title-card-error" className="error"></p>
@@ -60,8 +60,8 @@ export function App () {
           <p id="link-card-error" className="error"></p>
         </div>
       </PopupWithForm>
-      <PopupWithForm title="Вы уверены?" name="CardDelete" />
-      <PopupWithForm title="Обновить аватар" name="avatar" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}>
+      <PopupWithForm title="Вы уверены?" name="CardDelete" buttonText="Да"/>
+      <PopupWithForm title="Обновить аватар" name="avatar" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} buttonText="Сохранить">
         <div className="popup__input-container">
           <input className="popup__input popup__input_value_avatar" id="avatar-card" name="avatar" type="url" defaultValue="" placeholder="Ссылка" required />
           <p id="avatar-card-error" className="error"></p>

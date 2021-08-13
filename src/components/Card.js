@@ -15,7 +15,7 @@ export function Card ({ card, onCardClick }) {
           <h2 className="elements__title">{card.name}</h2>
           <div className="elements__container-like">
             <button className="elements__button-like" type="button" name="Like" aria-label="Like"></button>
-            <p className="elements__quantity"></p> 
+            <p className="elements__quantity">{card.likes.length}</p> 
           </div>
         </div>
       </div>

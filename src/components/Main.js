@@ -18,7 +18,7 @@ export function Main (props) {
     .catch((err) => {
       console.log(err);
     })
-  });
+  }, []);
 
   React.useEffect(() => {
     api.getInitialCards()
@@ -28,6 +28,7 @@ export function Main (props) {
           name: item.name,
           image: item.link,
           _id: item._id,
+          likes: item.likes,
         }))
       );
     })
@@ -56,9 +57,11 @@ export function Main (props) {
     </section>
     <section className="elements">
       <div className="elements__item">
-      {cards.map(card => 
+      {cards.map(card => (
           <Card card={card} key={card._id} onCardClick={props.onCardClick}/>
-        )}
+          )
+        )
+      }
       </div>
     </section>
   </main>
