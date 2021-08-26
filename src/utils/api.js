@@ -27,53 +27,37 @@ class Api {
     .then(this._handleResponce);
   }
 
-  setUserInfo( name, info ) {
+  setUserInfo( data ) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        name: name,
-        about: info,
+        name: data.name,
+        about: data.about,
       })
     })
     .then(this._handleResponce);
   }
 
-  postCard( name, image ) {
+  postCard( data ) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
-        name: name,
-        link: image,
+        name: data.name,
+        link: data.link,
       })
     })
     .then(this._handleResponce);
   }
   
-  setAvatar( avatar ) {
+  setAvatar( data ) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: avatar
+        avatar: data.avatar
       })
-    })
-    .then(this._handleResponce);
-  }
-
-  likeCard( cardId ) {
-    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-      method: 'PUT',
-      headers: this._headers,
-    })
-    .then(this._handleResponce);
-  }
-
-  deleteLikeCard( cardId ) {
-    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-      method: 'DELETE',
-      headers: this._headers,
     })
     .then(this._handleResponce);
   }
@@ -85,6 +69,16 @@ class Api {
     })
     .then(this._handleResponce);
   }
+
+  toggleLikeCard( cardId, isLiked ) {
+    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+      method: isLiked ? 'PUT' : 'DELETE',
+      headers: this._headers,
+    })
+      .then(this._handleResponce);
+  }
+  
+
 }
 
 export const api = new Api({
