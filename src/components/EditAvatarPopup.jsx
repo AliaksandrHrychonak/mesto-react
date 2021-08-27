@@ -3,13 +3,13 @@ import { PopupWithForm } from './PopupWithForm';
 
 export const EditAvatarPopup = (props) => {
 
-  const avatar = React.useRef();
+  const avatarRefInput = React.useRef();
 
   function handleSubmit(evt) {
     evt.preventDefault();
   
     props.onUpdateAvatar({
-      avatar: avatar.current.value,
+      avatar: avatarRefInput.current.value,
     });
   } 
   return (
@@ -23,7 +23,7 @@ export const EditAvatarPopup = (props) => {
         >
           <div className="popup__input-container">
             <input
-              ref={avatar || ''}
+              ref={avatarRefInput}
               className="popup__input popup__input_value_avatar"
               id="avatar-card"
               name="avatar"
