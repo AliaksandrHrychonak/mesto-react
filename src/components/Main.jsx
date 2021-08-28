@@ -2,19 +2,17 @@ import React from "react";
 import { Card } from "./Card";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 export function Main(props) {
-
   const currentUser = React.useContext(CurrentUserContext);
 
   const onEditAvatar = () => {
     props.onEditAvatar(props.onClick);
-  }
-  
+  };
   const onEditProfile = () => {
     props.onEditProfile(props.onClick);
-  }
+  };
   const onAddPlace = () => {
     props.onAddPlace(props.onClick);
-  }
+  };
 
   return (
     <main className="main">
@@ -26,10 +24,7 @@ export function Main(props) {
               src={currentUser.avatar}
               alt="Фото профиля"
             />
-            <div
-              className="profile__avatar-edit"
-              onClick={onEditAvatar}
-            ></div>
+            <div className="profile__avatar-edit" onClick={onEditAvatar}></div>
           </div>
           <div className="profile__info">
             <h1 className="profile__info-title">{currentUser.name}</h1>

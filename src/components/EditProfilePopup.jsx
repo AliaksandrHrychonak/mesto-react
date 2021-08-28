@@ -35,7 +35,7 @@ export const EditProfilePopup = (props) => {
       onSubmit={handleSubmit}
       isOpen={props.isOpen}
       onClose={props.onClose}
-      buttonText="Сохранить"
+      buttonText={props.isLoad ? "Сохранение..." : "Сохранить"}
     >
       <div className="popup__input-container">
         <input
@@ -43,7 +43,7 @@ export const EditProfilePopup = (props) => {
           name="name"
           id="name-profile"
           type="text"
-          value={name || ''}
+          value={name || ""}
           placeholder="Имя"
           minLength="2"
           maxLength="30"
@@ -58,7 +58,7 @@ export const EditProfilePopup = (props) => {
           name="info"
           id="job-profile"
           type="text"
-          value={info || ''}
+          value={info || ""}
           placeholder="Профессия"
           minLength="2"
           maxLength="200"
@@ -70,4 +70,3 @@ export const EditProfilePopup = (props) => {
     </PopupWithForm>
   );
 };
-

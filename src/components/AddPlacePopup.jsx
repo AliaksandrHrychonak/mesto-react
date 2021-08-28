@@ -33,7 +33,7 @@ export const AddPlacePopup = (props) => {
       isOpen={props.isOpen}
       onClose={props.onClose}
       onSubmit={handleSubmit}
-      buttonText="Создать"
+      buttonText={props.isLoad ? "Сохранение..." : "Создать"}
     >
       <div className="popup__input-container">
         <input
@@ -42,7 +42,7 @@ export const AddPlacePopup = (props) => {
           id="title-card"
           name="name"
           type="text"
-          value={name || ''}
+          value={name || ""}
           placeholder="Название"
           minLength="2"
           maxLength="30"
@@ -57,7 +57,7 @@ export const AddPlacePopup = (props) => {
           id="link-card"
           name="link"
           type="url"
-          value={link || ''}
+          value={link || ""}
           placeholder="Ссылка на картинку"
           required
         />
