@@ -1,33 +1,26 @@
-# Проект Mesto
+# Проект Mesto-React
+### Перенос проета Mesto(vanilla.js) https://aliaksandrhrychonak.github.io/mesto/ на React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
+Адаптивная Веб-страница с возможностью редактирования информации и добавления карточек с фотографиями.
 
-## Available Scripts
+### Для начала работы:
+#### NodeJS - https://nodejs.org/en/
 
-In the project directory, you can run:
+## Установка
+##### git clone https://github.com/AliaksandrHrychonak/mesto-react.git - Клонируйте репозиторий себе
+##### npm install - Установит все необходимые зависимости
+##### npm start - Запуск разработки 
+##### npm build - Собрать проект 
 
-### `yarn start`
+## Функционал:
+#### •‎ Редактирование информации о себе и редактирования профиля.
+#### •‎ Добавление карточек с фотографиями через форму.
+#### •‎ Добавление карточки с фотографией.
+#### •‎ Удаление карточки с фотографией.
+#### •‎ Лайк карточки с фотографией.
+#### •‎ Валидация форм.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
+### Стек: 
+#### HTML, CSS, React, JSX, API, Figma.
 
