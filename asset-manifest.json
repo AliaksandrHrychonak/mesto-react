@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/AliaksandrHrychonak/mesto-react/static/css/main.564a5b43.chunk.css",
+    "main.js": "/AliaksandrHrychonak/mesto-react/static/js/main.b35b77a1.chunk.js",
+    "main.js.map": "/AliaksandrHrychonak/mesto-react/static/js/main.b35b77a1.chunk.js.map",
+    "runtime-main.js": "/AliaksandrHrychonak/mesto-react/static/js/runtime-main.e3014fbf.js",
+    "runtime-main.js.map": "/AliaksandrHrychonak/mesto-react/static/js/runtime-main.e3014fbf.js.map",
+    "static/js/2.0b770f15.chunk.js": "/AliaksandrHrychonak/mesto-react/static/js/2.0b770f15.chunk.js",
+    "static/js/2.0b770f15.chunk.js.map": "/AliaksandrHrychonak/mesto-react/static/js/2.0b770f15.chunk.js.map",
+    "static/js/3.8f549c3c.chunk.js": "/AliaksandrHrychonak/mesto-react/static/js/3.8f549c3c.chunk.js",
+    "static/js/3.8f549c3c.chunk.js.map": "/AliaksandrHrychonak/mesto-react/static/js/3.8f549c3c.chunk.js.map",
+    "index.html": "/AliaksandrHrychonak/mesto-react/index.html",
+    "static/css/main.564a5b43.chunk.css.map": "/AliaksandrHrychonak/mesto-react/static/css/main.564a5b43.chunk.css.map",
+    "static/js/2.0b770f15.chunk.js.LICENSE.txt": "/AliaksandrHrychonak/mesto-react/static/js/2.0b770f15.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/AliaksandrHrychonak/mesto-react/static/media/delete.2af49b82.svg",
+    "static/media/logo.03b78ada.svg": "/AliaksandrHrychonak/mesto-react/static/media/logo.03b78ada.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3014fbf.js",
+    "static/js/2.0b770f15.chunk.js",
+    "static/css/main.564a5b43.chunk.css",
+    "static/js/main.b35b77a1.chunk.js"
+  ]
+}
